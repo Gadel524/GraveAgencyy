@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9f5e63c2d8da49f3a64535ffe9aeab99" Name="Diagram1">
+        <EntityTypeShape EntityType="GrobModel.Clients" Width="1.5" PointX="5.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="GrobModel.Coffins" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GrobModel.Logs" Width="1.5" PointX="5.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GrobModel.Necromancers" Width="1.5" PointX="5.25" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GrobModel.OrderItems" Width="1.5" PointX="9.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GrobModel.Orders" Width="1.5" PointX="7.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GrobModel.ResurrectionHistory" Width="1.5" PointX="9.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GrobModel.Roles" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GrobModel.Users" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <AssociationConnector Association="GrobModel.FK__Clients__Registe__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="GrobModel.FK__Orders__ClientID__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="GrobModel.FK__Resurrect__Clien__66603565" ManuallyRouted="false" />
+        <AssociationConnector Association="GrobModel.FK__OrderItem__Coffi__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="GrobModel.FK__Logs__UserID__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="GrobModel.FK__Necromanc__UserI__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="GrobModel.FK__Resurrect__Necro__6754599E" ManuallyRouted="false" />
+        <AssociationConnector Association="GrobModel.FK__OrderItem__Order__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="GrobModel.FK__Orders__UserID__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="GrobModel.FK__Resurrect__Order__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="GrobModel.FK__Users__RoleID__4E88ABD4" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

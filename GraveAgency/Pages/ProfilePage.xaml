@@ -1,0 +1,143 @@
+﻿<Page x:Class="GraveAgency.Pages.ProfilePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Профиль" Background="#0a0a0a"
+       FontFamily="Times New Roman"
+      ScrollViewer.VerticalScrollBarVisibility="Auto">
+    
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="450"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="ПРОФИЛЬ ПОЛЬЗОВАТЕЛЯ" FontSize="24" FontWeight="Bold" 
+                       Foreground="#800080" HorizontalAlignment="Center" Margin="0,20,0,20"/>
+            <Border Grid.Row="1" Grid.Column="1" Background="#1a1a1a" CornerRadius="10" Padding="20" Margin="0,0,0,15">
+                <StackPanel>
+                    <TextBlock Text="ЛОГИН" Foreground="#800080" FontSize="14" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <TextBlock x:Name="txtUsername" Background="#333333" Foreground="White" 
+                               Padding="10" FontSize="14" Margin="0,0,0,15"/>
+                    
+                    <TextBlock Text="EMAIL" Foreground="#800080" FontSize="14" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <TextBox x:Name="txtEmail" Background="#333333" Foreground="White" 
+                             BorderBrush="#800080" BorderThickness="1" Padding="10" FontSize="14"
+                             Margin="0,0,0,15"/>
+                    
+                    <TextBlock Text="РОЛЬ" Foreground="#800080" FontSize="14" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <TextBlock x:Name="txtRole" Background="#333333" Foreground="White" 
+                               Padding="10" FontSize="14" Margin="0,0,0,15"/>
+                    
+                    <TextBlock Text="ДАТА РЕГИСТРАЦИИ" Foreground="#800080" FontSize="14" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <TextBlock x:Name="txtCreatedAt" Background="#333333" Foreground="White" 
+                               Padding="10" FontSize="14" Margin="0,0,0,20"/>
+                </StackPanel>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="1" Background="#1a1a1a" CornerRadius="10" Padding="20" Margin="0,0,0,15">
+                <StackPanel>
+                    <TextBlock Text="УРОВЕНЬ ТРАУРА" Foreground="#800080" FontSize="16" FontWeight="Bold" 
+                               HorizontalAlignment="Center" Margin="0,0,0,15"/>
+                    
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <TextBlock Grid.Column="0" Text="😌" FontSize="20" Foreground="#888888" Margin="0,0,10,0"/>
+                        
+                        <Slider x:Name="sliderGriefLevel" Grid.Column="1" Minimum="0" Maximum="10" 
+                                Value="5" TickFrequency="1" TickPlacement="BottomRight"
+                                Background="#333333" Foreground="#800080" 
+                                Margin="0,5,0,5" IsSnapToTickEnabled="True"/>
+                        
+                        <TextBlock Grid.Column="2" Text="💀" FontSize="20" Foreground="#800080" Margin="10,0,0,0"/>
+                    </Grid>
+                    
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+                        <TextBlock Text="Текущий уровень: " Foreground="#888888" FontSize="14"/>
+                        <TextBlock x:Name="txtGriefLevel" Text="5" Foreground="#800080" FontSize="14" FontWeight="Bold"/>
+                        <TextBlock Text=" / 10" Foreground="#888888" FontSize="14"/>
+                    </StackPanel>
+                    
+                    <TextBlock x:Name="txtGriefDescription" Text="Средний траур" Foreground="#800080" 
+                               FontSize="12" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+                    
+                    <Button x:Name="btnSaveGriefLevel" Content="СОХРАНИТЬ УРОВЕНЬ ТРАУРА" Background="#800080" Foreground="White"
+                            Padding="10" Margin="0,15,0,0" FontSize="12" FontWeight="Bold" Cursor="Hand"/>
+                </StackPanel>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="1" Background="#1a1a1a" CornerRadius="10" Padding="20" Margin="0,0,0,15">
+                <StackPanel>
+                    <TextBlock Text="СМЕНА ПАРОЛЯ" Foreground="#800080" FontSize="16" FontWeight="Bold" 
+                               HorizontalAlignment="Center" Margin="0,0,0,15"/>
+                    
+                    <TextBlock Text="ТЕКУЩИЙ ПАРОЛЬ" Foreground="#888888" FontSize="12" Margin="0,0,0,5"/>
+                    <PasswordBox x:Name="txtOldPassword" Background="#333333" Foreground="White" 
+                                 BorderBrush="#800080" BorderThickness="1" Padding="10" FontSize="14"
+                                 Margin="0,0,0,15"/>
+                    
+                    <TextBlock Text="НОВЫЙ ПАРОЛЬ" Foreground="#888888" FontSize="12" Margin="0,0,0,5"/>
+                    <PasswordBox x:Name="txtNewPassword" Background="#333333" Foreground="White" 
+                                 BorderBrush="#800080" BorderThickness="1" Padding="10" FontSize="14"
+                                 Margin="0,0,0,15"/>
+                    
+                    <TextBlock Text="ПОДТВЕРЖДЕНИЕ" Foreground="#888888" FontSize="12" Margin="0,0,0,5"/>
+                    <PasswordBox x:Name="txtConfirmPassword" Background="#333333" Foreground="White" 
+                                 BorderBrush="#800080" BorderThickness="1" Padding="10" FontSize="14"
+                                 Margin="0,0,0,20"/>
+                    
+                    <Button x:Name="btnChangePassword" Content="СМЕНИТЬ ПАРОЛЬ" Background="#800080" Foreground="White"
+                            Padding="15" FontSize="14" FontWeight="Bold" Cursor="Hand"/>
+                </StackPanel>
+            </Border>
+            <Border Grid.Row="4" Grid.Column="1" Background="#1a1a1a" CornerRadius="10" Padding="20" Margin="0,0,0,15">
+                <Button x:Name="btnSaveProfile" Content="СОХРАНИТЬ ИЗМЕНЕНИЯ EMAIL" Background="#444444" Foreground="White"
+                        Padding="15" FontSize="14" FontWeight="Bold" Cursor="Hand"/>
+            </Border>
+            <Border Grid.Row="5" Grid.Column="1" Background="#1a1a1a" CornerRadius="10" Padding="20" Margin="0,0,0,15">
+                <StackPanel>
+                    <TextBlock Text="АВАТАР" Foreground="#800080" FontSize="16" FontWeight="Bold" 
+                               HorizontalAlignment="Center" Margin="0,0,0,15"/>
+                    
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Border Grid.Column="0" Width="80" Height="80" Background="#333333" 
+                                CornerRadius="40" BorderBrush="#800080" BorderThickness="2" Margin="0,0,15,0">
+                            <TextBlock x:Name="txtAvatar" Text="⚰️" FontSize="40" Foreground="#800080" 
+                                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        
+                        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                            <Button x:Name="btnUploadAvatar" Content="ЗАГРУЗИТЬ АВАТАР" Background="#800080" Foreground="White"
+                                    Padding="10" Margin="0,0,0,10" FontSize="12" FontWeight="Bold" Cursor="Hand"/>
+                            <Button x:Name="btnClearAvatar" Content="УДАЛИТЬ АВАТАР" Background="#660000" Foreground="White"
+                                    Padding="10" FontSize="12" FontWeight="Bold" Cursor="Hand"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </Border>
+            <TextBlock x:Name="txtMessage" Grid.Row="6" Grid.Column="1" Text="" 
+                       FontSize="12" HorizontalAlignment="Center" Foreground="#800080" Margin="0,10"/>
+            <TextBlock Grid.Row="7" Grid.Column="1" Text="" Height="30"/>
+        </Grid>
+    </ScrollViewer>
+</Page>

@@ -1,0 +1,74 @@
+﻿<Page x:Class="GraveAgency.Pages.NecromancerPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GraveAgency.Pages"
+        mc:Ignorable="d"
+        Title="Панель некроманта" Background="#0a0a0a"
+      FontFamily="Times New Roman">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="ПАНЕЛЬ ГЛАВНОГО НЕКРОМАНТА" FontSize="24" FontWeight="Bold" 
+                   Foreground="#800080" HorizontalAlignment="Center" Margin="0,0,0,15"/>
+
+        <Border Grid.Row="1" Background="#1a1a1a" CornerRadius="10" Padding="15" Margin="0,0,0,15">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                    <TextBlock Text="ЗАЯВКИ НА ВОСКРЕШЕНИЕ" FontSize="16" FontWeight="Bold" 
+                               Foreground="#800080" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                    <ListBox x:Name="lstResurrectionRequests" Height="200" Background="#333333" 
+                             Foreground="White" BorderBrush="#800080"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Margin="10,0,0,0">
+                    <TextBlock Text="СТАТИСТИКА ВОСКРЕШЕНИЙ" FontSize="16" FontWeight="Bold" 
+                               Foreground="#800080" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                    <TextBlock x:Name="txtSuccessCount" Background="#333333" Padding="10" 
+                               Foreground="White" Margin="0,0,0,5"/>
+                    <TextBlock x:Name="txtFailCount" Background="#333333" Padding="10" 
+                               Foreground="White" Margin="0,0,0,5"/>
+                    <TextBlock x:Name="txtSuccessRate" Background="#333333" Padding="10" 
+                               Foreground="White"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="2" Background="#1a1a1a" CornerRadius="10" Padding="15" Margin="0,0,0,15">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <ComboBox x:Name="cmbOrders" Grid.Column="0" Background="#333333" Foreground="White"
+                          BorderBrush="#800080" Height="35" Margin="0,0,10,0"/>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <Button x:Name="btnPlanSeance" Content="ПЛАНИРОВАТЬ СЕАНС" Background="#800080" 
+                            Foreground="White" Padding="15,10" Margin="5" Cursor="Hand"/>
+                    <Button x:Name="btnCompleteSuccess" Content="УСПЕШНО" Background="#006600" 
+                            Foreground="White" Padding="15,10" Margin="5" Cursor="Hand"/>
+                    <Button x:Name="btnCompleteFail" Content="НЕУДАЧА" Background="#660000" 
+                            Foreground="White" Padding="15,10" Margin="5" Cursor="Hand"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <DataGrid x:Name="dgResurrections" Grid.Row="3" Background="#1a1a1a" Foreground="White"
+                  BorderBrush="#800080" AutoGenerateColumns="True" Margin="0,0,0,10"
+                  HeadersVisibility="Column"/>
+    </Grid>
+</Page>
