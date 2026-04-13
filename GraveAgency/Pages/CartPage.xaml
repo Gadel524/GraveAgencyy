@@ -19,7 +19,7 @@
         <TextBlock Grid.Row="0" Text="КОРЗИНА" FontSize="24" FontWeight="Bold" 
                    Foreground="#800080" HorizontalAlignment="Center" Margin="0,0,0,15"/>
 
-        <DataGrid x:Name="dgCart" Grid.Row="1" Background="#1a1a1a" Foreground="White"
+        <DataGrid x:Name="dgCart" Grid.Row="1" Background="#1a1a1a" Foreground="Black"
                   BorderBrush="#800080" AutoGenerateColumns="False" Margin="0,0,0,10"
                   HeadersVisibility="Column">
             <DataGrid.Columns>

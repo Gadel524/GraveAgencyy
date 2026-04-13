@@ -27,7 +27,7 @@
                          BorderBrush="#800080" BorderThickness="1" Padding="8" FontSize="14"/>
 
                 <ComboBox x:Name="cmbMaterial" Grid.Column="1" Width="150" Margin="10,0"
-                          Background="#333333" Foreground="White" BorderBrush="#800080"/>
+                          Background="#333333" Foreground="Black" BorderBrush="#800080"/>
 
                 <CheckBox x:Name="chkOnlyWithButton" Grid.Column="2" Content="Только с кнопкой Выход"
                           Foreground="White" Margin="10,0" VerticalAlignment="Center"/>

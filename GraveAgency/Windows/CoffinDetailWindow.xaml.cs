@@ -88,9 +88,26 @@ namespace GraveAgency.Windows
                 var orders = Dbb.dbb.Orders.Where(o => orderIds.Contains(o.OrderID)).ToList();
 
                 var orderList = new System.Collections.Generic.List<string>();
-                foreach (var o in orders)
+                if (coffin.Rating.HasValue)
                 {
-                   //orderList.Add("Заказ #" + o.OrderID + " от " + o.OrderDate.ToString("dd.MM.yyyy") + " - " + o.Status);
+                    string stars = "";
+                    int ratingInt = (int)coffin.Rating.Value;
+
+                    for (int i = 0; i < ratingInt; i++)
+                    {
+                        stars = stars + "★";
+                    }
+                    for (int i = ratingInt; i < 5; i++)
+                    {
+                        stars = stars + "☆";
+                    }
+
+                    decimal ratingValue = coffin.Rating.Value;
+                    txtRating.Text = stars + " (" + ratingValue.ToString("0.0") + ")";
+                }
+                else
+                {
+                    txtRating.Text = "☆☆☆☆☆ (нет оценок)";
                 }
 
                 lstOrders.ItemsSource = orderList;

@@ -27,50 +27,43 @@ namespace GraveAgency
         {
             InitializeComponent();
             txtUserName.Text = Session.CurrentUsername;
+            btnCatalog.Click += (s, e) => {
+                MainContent.Content = new CatalogWindow();
+            };
 
-            btnCatalog.Click += BtnCatalog_Click;
-            btnCart.Click += BtnCart_Click;
-            btnProfile.Click += BtnProfile_Click;
+            btnCart.Click += (s, e) => {
+                MainContent.Content = new CartPage();
+            };
+
+            btnProfile.Click += (s, e) => {
+                MainContent.Content = new ProfilePage();
+            };
+
+            btnNecromancer.Click += (s, e) => {
+                try
+                {
+                    NecromancerPage necWindow = new NecromancerPage();
+                    MainContent.Content = necWindow;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ошибка открытия NecromancerWindow: " + ex.Message);
+                }
+            };
+            btnAdmin.Click += (s, e) => {
+                try
+                {
+                    AdminPage adminWindow = new AdminPage();
+                    MainContent.Content = adminWindow;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ошибка открытия AdminWindow: " + ex.Message);
+                }
+            };
+
             btnLogout.Click += BtnLogout_Click;
-
-            if (Session.IsNecromancer)
-            {
-                btnNecromancer.Visibility = Visibility.Visible;
-                btnNecromancer.Click += BtnNecromancer_Click;
-            }
-
-            if (Session.IsAdmin)
-            {
-                btnAdmin.Visibility = Visibility.Visible;
-                btnAdmin.Click += BtnAdmin_Click;
-            }
-
             MainContent.Content = new CatalogWindow();
-        }
-
-        private void BtnCatalog_Click(object sender, RoutedEventArgs e)
-        {
-            MainContent.Content = new CatalogWindow();
-        }
-
-        private void BtnCart_Click(object sender, RoutedEventArgs e)
-        {
-            MainContent.Content = new CartPage();
-        }
-
-        private void BtnProfile_Click(object sender, RoutedEventArgs e)
-        {
-            MainContent.Content = new ProfilePage();
-        }
-
-        private void BtnNecromancer_Click(object sender, RoutedEventArgs e)
-        {
-            MainContent.Content = new NecromancerPage();
-        }
-
-        private void BtnAdmin_Click(object sender, RoutedEventArgs e)
-        {
-            MainContent.Content = new AdminPage();
         }
 
         private void BtnLogout_Click(object sender, RoutedEventArgs e)

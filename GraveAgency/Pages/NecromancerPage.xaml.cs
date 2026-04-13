@@ -144,7 +144,7 @@ namespace GraveAgency.Pages
                 }
 
                 ResurrectionHistory history = new ResurrectionHistory();
-               // history.ClientID = selectedOrder.ClientID;
+               //history.ClientID = selectedOrder.ClientID;
                 history.NecromancerID = necromancer.NecromancerID;
                 history.OrderID = selectedOrder.OrderID;
                 history.ResurrectionDate = DateTime.Now;

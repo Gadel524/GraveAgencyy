@@ -57,7 +57,15 @@ namespace GraveAgency.Windows
                     Session.CurrentUserID = user.UserID;
                     Session.CurrentUsername = user.Username;
                     Session.CurrentRoleID = user.RoleID;
-                    Session.CurrentRoleName = role.RoleName;
+
+                    if (role != null)
+                    {
+                        Session.CurrentRoleName = role.RoleName;
+                    }
+                    else
+                    {
+                        Session.CurrentRoleName = "Клиент";
+                    }
 
                     MessageBox.Show("Добро пожаловать, " + Session.CurrentUsername + "!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
 

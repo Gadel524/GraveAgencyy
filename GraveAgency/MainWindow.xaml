@@ -47,11 +47,9 @@
                 <Button x:Name="btnProfile" Content="👤 ПРОФИЛЬ" Background="#800080" Foreground="White"
                         Padding="20,10" Margin="5" FontSize="14" FontWeight="Bold" Cursor="Hand"/>
                 <Button x:Name="btnNecromancer" Content="🔮 НЕКРОМАНТ" Background="#800080" Foreground="White"
-                        Padding="20,10" Margin="5" FontSize="14" FontWeight="Bold" Cursor="Hand"
-                        Visibility="Collapsed"/>
+                        Padding="20,10" Margin="5" FontSize="14" FontWeight="Bold" Cursor="Hand"/>
                 <Button x:Name="btnAdmin" Content="⚙️ АДМИН" Background="#800080" Foreground="White"
-                        Padding="20,10" Margin="5" FontSize="14" FontWeight="Bold" Cursor="Hand"
-                        Visibility="Collapsed"/>
+                        Padding="20,10" Margin="5" FontSize="14" FontWeight="Bold" Cursor="Hand"/>
             </StackPanel>
         </Border>
 

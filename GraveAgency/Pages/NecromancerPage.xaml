@@ -53,7 +53,7 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-                <ComboBox x:Name="cmbOrders" Grid.Column="0" Background="#333333" Foreground="White"
+                <ComboBox x:Name="cmbOrders" Grid.Column="0" Background="#333333" Foreground="Black"
                           BorderBrush="#800080" Height="35" Margin="0,0,10,0"/>
 
                 <StackPanel Grid.Column="1" Orientation="Horizontal">
@@ -67,7 +67,7 @@
             </Grid>
         </Border>
 
-        <DataGrid x:Name="dgResurrections" Grid.Row="3" Background="#1a1a1a" Foreground="White"
+        <DataGrid x:Name="dgResurrections" Grid.Row="3" Background="#1a1a1a" Foreground="Black"
                   BorderBrush="#800080" AutoGenerateColumns="True" Margin="0,0,0,10"
                   HeadersVisibility="Column"/>
     </Grid>

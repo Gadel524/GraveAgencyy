@@ -44,7 +44,7 @@
                         </Grid>
                     </Border>
 
-                    <DataGrid x:Name="dgUsers" Grid.Row="1" Background="#1a1a1a" Foreground="White"
+                    <DataGrid x:Name="dgUsers" Grid.Row="1" Background="#1a1a1a" Foreground="Black"
                               BorderBrush="#800080" AutoGenerateColumns="False" Margin="0,0,0,10"
                               HeadersVisibility="Column" IsReadOnly="True" SelectionMode="Single">
                         <DataGrid.Columns>
@@ -75,7 +75,7 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <DataGrid x:Name="dgCoffins" Grid.Row="0" Background="#1a1a1a" Foreground="White"
+                    <DataGrid x:Name="dgCoffins" Grid.Row="0" Background="#1a1a1a" Foreground="Black"
                               BorderBrush="#800080" AutoGenerateColumns="False" Margin="0,0,0,10"
                               HeadersVisibility="Column" IsReadOnly="True" SelectionMode="Single"
                               Height="300">
@@ -116,7 +116,7 @@
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
 
-                            <ComboBox x:Name="cmbOrderStatus" Grid.Column="0" Background="#333333" Foreground="White"
+                            <ComboBox x:Name="cmbOrderStatus" Grid.Column="0" Background="#333333" Foreground="Black"
                                       BorderBrush="#800080" Height="35">
                                 <ComboBoxItem Content="Все статусы"/>
                                 <ComboBoxItem Content="Новый"/>
@@ -133,7 +133,7 @@
                         </Grid>
                     </Border>
 
-                    <DataGrid x:Name="dgOrders" Grid.Row="1" Background="#1a1a1a" Foreground="White"
+                    <DataGrid x:Name="dgOrders" Grid.Row="1" Background="#1a1a1a" Foreground="Black"
                               BorderBrush="#800080" AutoGenerateColumns="False" Margin="0,0,0,10"
                               HeadersVisibility="Column" IsReadOnly="True" SelectionMode="Single">
                         <DataGrid.Columns>
@@ -161,15 +161,15 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <DataGrid x:Name="dgNecromancers" Grid.Row="0" Background="#1a1a1a" Foreground="White"
+                    <DataGrid x:Name="dgNecromancers" Grid.Row="0" Background="#1a1a1a" Foreground="Black"
                               BorderBrush="#800080" AutoGenerateColumns="False" Margin="0,0,0,10"
                               HeadersVisibility="Column" IsReadOnly="True" SelectionMode="Single">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="ID" Binding="{Binding NecromancerID}" Width="50"/>
-                            <DataGridTextColumn Header="ФИО" Binding="{Binding FullName}" Width="200"/>
-                            <DataGridTextColumn Header="Опыт (лет)" Binding="{Binding ExperienceYears}" Width="100"/>
-                            <DataGridTextColumn Header="Телефон" Binding="{Binding Phone}" Width="120"/>
-                            <DataGridTextColumn Header="Дата найма" Binding="{Binding HireDate, StringFormat=dd.MM.yyyy}" Width="120"/>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Necromancers.NecromancerID}" Width="50"/>
+                            <DataGridTextColumn Header="ФИО" Binding="{Binding Necromancers.FullName}" Width="200"/>
+                            <DataGridTextColumn Header="Опыт (лет)" Binding="{Binding Necromancers.ExperienceYears}" Width="100"/>
+                            <DataGridTextColumn Header="Телефон" Binding="{Binding Necromancers.Phone}" Width="120"/>
+                            <DataGridTextColumn Header="Дата найма" Binding="{Binding Necromancers.HireDate, StringFormat=dd.MM.yyyy}" Width="120"/>
                         </DataGrid.Columns>
                     </DataGrid>
 

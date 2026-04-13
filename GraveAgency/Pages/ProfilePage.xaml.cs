@@ -42,8 +42,7 @@ namespace GraveAgency.Pages
                 {
                     txtUsername.Text = user.Username;
                     txtEmail.Text = user.Email;
-                    //txtCreatedAt.Text = user.CreatedAt.ToString("dd.MM.yyyy HH:mm");
-
+                    txtCreatedAt.Text = user.CreatedAt?.ToString("dd.MM.yyyy HH:mm") ?? "Дата неизвестна";
                     var role = Dbb.dbb.Roles.FirstOrDefault(r => r.RoleID == user.RoleID);
                     if (role != null)
                     {
